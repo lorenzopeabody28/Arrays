@@ -18,6 +18,7 @@ public class Arrays {
         averageNum();
     maxNum();
     minNum();
+    maxIndex();
     }
 
     public void displayArray(){
@@ -32,21 +33,23 @@ public class Arrays {
         for (int q = 0; q < nums.length; q++) {
             sum += nums[q];
         }
-        System.out.println(sum);
+        System.out.println("Sum " + sum);
     }
     public void averageNum(){
-        int avg = 0;
+        double sum = 0;
+        double avg = 0.0;
         for (int q = 0; q < nums.length; q++) {
-            avg += nums[q] / nums.length;
+            sum += nums[q];
         }
-        System.out.println(avg);
+        avg = sum / nums.length;
+        System.out.println("Avg: " + avg);
     }
     public void maxNum() {
-        int max = 0;
+        int max = nums[0];
         for (int q = 0; q < nums.length; q++) {
             max = Math.max(max, nums[q]);
         }
-        System.out.println(max);
+        System.out.println("Max: " + max);
     }
 
     public void minNum(){
@@ -54,9 +57,21 @@ public class Arrays {
         for (int q = 0; q < nums.length; q++) {
             min = Math.min(min,nums[q]);
         }
-        System.out.println(min);
+        System.out.println("Min: " + min);
     }
+    //todo: make a method called maxIndex that finds the index aka buquet label that has the max numer
+    public void maxIndex() {
+        int max = nums[0];
+        int index = 0;
+        for (int q = 0; q < nums.length; q++) {
+            //max = Math.max(max, nums[q]);
+            if (nums[q] > max) {
+                max = nums[q];
+                index = q;
+            }
 
+        }
+        System.out.println("Max Index: " + index);
 
-}
-
+    }
+    }
