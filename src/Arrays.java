@@ -19,6 +19,7 @@ public class Arrays {
     maxNum();
     minNum();
     maxIndex();
+    greaterThan50();
     }
 
     public void displayArray(){
@@ -72,6 +73,16 @@ public class Arrays {
 
         }
         System.out.println("Max Index: " + index);
+
+    }
+    public void greaterThan50(){
+        int count = 0;
+        for(int q = 0; q < nums.length; q++){
+            if(nums[q] >= 59){
+                count++;
+            }
+        }
+        System.out.println("Greater than or equal to 59: " + count);
 
     }
     }
