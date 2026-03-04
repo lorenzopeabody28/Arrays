@@ -1,6 +1,7 @@
 public class Arrays {
 
     public int[] nums;
+    public Star[] stars;
 
     public static void main(String[] args) {
         System.out.println("Welcome to the Awesome world of Arrays!!!");
@@ -8,7 +9,39 @@ public class Arrays {
     }
 
     public Arrays(){
+
     nums = new int[10];
+    stars = new Star[7];
+    nums[0]= 35;
+    stars[0] = new Star();
+    Star s1 = new Star();
+    s1.printInfo();
+    stars[0].printInfo();
+
+    //todo: change s1's color and points to be different
+        //call printInfo again
+        s1.color = "Red";
+        s1.points = 7;
+        s1.printInfo();
+
+        stars[0].color = "Blue";
+        stars[0].points = 11;
+        stars[0].printInfo();
+
+
+        //todo; fill all buckets in stars with stars
+
+
+        for(int v = 0; v < stars.length; v++){
+                stars[v] = new Star();
+        //todo: give points a random num between 0 and 10 inclusive
+            stars[v].points = (int)(Math.random()*11);
+        }
+        System.out.println("Buke 3; " + stars[3].color);
+
+
+
+
     //todo; fill the array with random numbs (1-100)
         for(int y = 0; y < nums.length; y++){
             nums[y] = (int)(Math.random()*100)+1;
@@ -20,6 +53,7 @@ public class Arrays {
     minNum();
     maxIndex();
     greaterThan50();
+    displayStars();
     }
 
     public void displayArray(){
@@ -85,4 +119,13 @@ public class Arrays {
         System.out.println("Greater than or equal to 59: " + count);
 
     }
+    //todo mae a displayStars method that uses the printInfo from Star to print all the stars
+
+    public void displayStars(){
+        for(int v = 0; v < stars.length; v++){
+            stars[v].printInfo();
+        }
+
+    }
+
     }
