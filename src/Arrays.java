@@ -54,6 +54,7 @@ public class Arrays {
     maxIndex();
     greaterThan50();
     displayStars();
+    sumPoints();
     }
 
     public void displayArray(){
@@ -127,5 +128,13 @@ public class Arrays {
         }
 
     }
+    public void sumPoints(){
+        int sum = 0;
+        for (int v = 0; v < stars.length; v++) {
+            sum += stars[v].points;
+        }
+        System.out.println("Sum of points: " + sum);
+    }
 
     }
+
